@@ -1,0 +1,57 @@
+body {
+background-color: #D2D2D2;
+	padding: 10px;
+}
+
+#sign-in {
+	width:200px;
+}
+
+#sign-in-btn {
+	margin-bottom: 1em;
+}
+
+#login-form-box {
+	height: auto;
+}
+
+#login-form {
+	padding: 0 7px 7px;
+}
+
+#main {
+	width: 200px;
+}
+#highlight-btn{
+	color :#ffba01;
+	
+}
+#color-dropdown{
+	
+	height:30px;
+
+}
+#color-red{
+	color :#ff9c9c;	 
+}
+#color-yellow{
+	color :#ffba01;
+}
+#color-green{
+	color :#7bbd3f;
+}
+#color-blue{
+	color :#6eaaf5;
+}
+
+/*input[type="text"], input[type="password"] {
+	height: 16%;
+}*/
+#highlight-form table tbody tr th{
+	text-align:left;
+
+}
+
+a {
+	cursor: pointer;
+}

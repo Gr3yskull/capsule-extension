@@ -1,0 +1,16 @@
+/*
+	Created on 8-Apr-2013, by mitthu, alongwith manthan.
+	For capsule chrome extension.
+*/
+
+.surround_error {
+	border: 5px solid #d1082c;
+}
+
+.error_msg {
+	border-radius: 0px;
+	margin: 0 0 7px;
+	border-top: 1px dotted #b30000;
+	border-bottom: 1px dotted #b30000;
+	padding: 7px 8px;
+}

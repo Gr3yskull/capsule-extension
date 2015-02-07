@@ -1,0 +1,176 @@
+<html>
+<head>
+	<title>Capsule - Your Companion</title>
+	<!-- <link rel="stylesheet" href="css/popup.css"> -->
+	<!-- Jquery UI -->
+	<link rel="stylesheet" href="css/jquery.ui.all.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery.ui.core.js"></script>
+	<script src="js/jquery.ui.widget.js"></script>
+	<script src="js/jquery.ui.position.js"></script>
+	<script src="js/jquery.ui.menu.js"></script>
+	<script src="js/jquery.ui.autocomplete.js"></script>
+	<!-- Bootstrap includes -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<!-- Personalized includes -->
+	<link rel="stylesheet" type="text/css" href="css/capsule-popup.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+</head>
+
+<body>
+	<div id="popup">
+		<div id="main">
+			<div>
+              <div class="btn-group">
+					<button id="highlight-btn" class="btn noselect">Highlight</button>  
+					<button class="btn dropdown-toggle noselect" id = "color-dropdown" data-toggle="dropdown">
+    					<span class="caret"></span>
+  					</button>
+                	<ul class="dropdown-menu" id = "color-menu">
+                 		<li><a id = "color-yellow" href="#">Yellow</a></li>
+                 		<li><a id = "color-red" href="#">Red</a></li>
+                 		<li><a id = "color-blue" href="#">Blue</a></li>
+                 		<li><a id = "color-green" href="#">Green</a></li>
+                		<!-- dropdown menu links -->
+  					</ul> 
+               
+			  </div>
+              <button style="width:43%" id = "stackup-btn" class="btn input-block-level">StackUp</button>
+</div>
+			<!--<button  style="width:49%" class="btn input-block-level">Highlight</button>-->
+				
+            
+			<!-- <div class="line"></div> -->
+			<br />
+			<a id="goto-my-dashboard" href=""><i class="icon-home"></i> My Dashboard</a>&nbsp;
+			<!-- <a id="unread" href=""><i class="icon-align-justify"></i> StackUps</a><br /> -->
+			<!-- <a id="sign-out-btn"><i class="icon-off"></i> Sign Out</a> -->
+		</div>
+	</div>
+	<div id = "popup-storage" class="hide">
+		<div id="sign-in">
+			<!-- <h6>Login to your capsule</h6> -->
+			<div class="btn btn-primary input-block-level" id="sign-in-btn">Signin to Your Capsule</div>
+			<a id="sign-up-btn" href="">New to Capsule!</a>
+			<!-- <div class="btn btn-inverse input-block-level" id="get-sample">Sample</div> -->
+		</div>
+		<div id="login-form-box">
+			<div id="login-form-status" class="error_msg alert alert-error hide">Status</div>
+			<form id="login-form">
+				<h6>Enter Credentials</h6>
+				<input type="text" class="span3" placeholder="Username" name="username" required />
+				<input type="password" class="span3" placeholder="Password" name="password" required />
+				<input type="submit" class="btn" value="Login" required />
+				<br/>
+			</form>
+		</div>
+
+<div id="highlight-form">
+		<h3>Save Highlight</h3>
+		<form id="highlight-form-actual" method="post">
+    	<!--<input name="content" type="text" id="highlight-content" class="hide">-->
+		<input name="kind" id="highlight-kind" class="hide" value="H">
+		<!--<input name="colour" id="highlight-colour" class="hide" value="Red">-->
+		
+		<table>
+			<tbody>
+				<tr>
+					<th>Url </th>
+					<td>
+						<input name="url" type="text" id="highlight-url" size="64" readonly>
+					</td>
+				</tr>
+				<tr>
+					<th>Title </th>
+					<td>
+						<input name="title" id="highlight-title" size="64" type="text">
+					</td>
+				</tr>
+                <tr class = "hide">
+					<th>content </th>
+					<td>
+						<input name="content" type="text" id="highlight-content" size = "64" readonly>
+					</td>
+				</tr>
+                 <tr>
+					<th>color </th>
+					<td>
+						<input name="colour" type="text" id="highlight-color" size="64" readonly>
+					</td>
+				</tr>
+				<tr>
+					<th>Description </th>
+					<td>
+						<textarea name="description" id="highlight-description" cols="60"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>Tags </th>
+					<td>
+						<input name="tags" id="highlight-tag" size="64" type="text">
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input id="highlight-form-submit" type="submit" class="btn" value="Save">
+						<input type="reset" id="highlight-cancel-form-btn" class="btn" value="Cancel">
+					</td>
+				</tr>
+
+		</tbody>
+	</table>
+</form>
+</div>
+<div id="stackup-form">
+		<h3>Save StackUp</h3>
+		<form id="stackup-form-actual" method="post">
+    	<!--<input name="content" type="text" id="highlight-content" class="hide">-->
+		<input name="kind" id="stackup-kind" class="hide" value="S">
+		<!--<input name="colour" id="highlight-colour" class="hide" value="Red">-->
+		
+		<table>
+			<tbody>
+				<tr>
+					<th>Url </th>
+					<td>
+						<input name="url" type="text" id="stackup-url" size="64" readonly>
+					</td>
+				</tr>
+				<tr>
+					<th>Title </th>
+					<td>
+						<input name="title" id="stackup-title" size="64" type="text">
+					</td>
+				</tr>
+				<tr>
+					<th>Description </th>
+					<td>
+						<textarea name="description" id="stackup-description" cols="60"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>Tags </th>
+					<td>
+						<input name="tags" id="stackup-tag" size="64" type="text">
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input id="stackup-form-submit" type="submit" class="btn" value="Save">
+						<input type="reset" id="stackup-cancel-form-btn" class="btn" value="Cancel">
+					</td>
+				</tr>
+
+		</tbody>
+	</table>
+</form>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="css/common-end.css" />
+</body>
+</html>
